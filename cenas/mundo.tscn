@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://cifuiw0xkn0sl"]
+
+[ext_resource type="PackedScene" uid="uid://lv20w5dka3mw" path="res://cenas/menu_start.tscn" id="1_jqcuh"]
+[ext_resource type="PackedScene" uid="uid://cwfbfbsb0t7yk" path="res://cenas/fase_1.tscn" id="6_tdx8i"]
+[ext_resource type="Script" path="res://scripts/controle_mobile.gd" id="7_jm2hy"]
+[ext_resource type="PackedScene" uid="uid://dvfuy321btv7c" path="res://cenas/fase_2.tscn" id="8_mxmt8"]
+
+[node name="Mundo" type="Node2D"]
+position = Vector2(1660, 1228)
+
+[node name="menuStart" parent="." instance=ExtResource("1_jqcuh")]
+
+[node name="fases" type="Node2D" parent="."]
+
+[node name="fase_1" parent="fases" instance=ExtResource("6_tdx8i")]
+
+[node name="fase_2" parent="fases" instance=ExtResource("8_mxmt8")]
+
+[node name="controle_mobile" type="Node2D" parent="."]
+
+[node name="controle_mobile" type="CanvasLayer" parent="controle_mobile"]
+script = ExtResource("7_jm2hy")

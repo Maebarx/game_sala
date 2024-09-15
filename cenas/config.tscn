@@ -1,0 +1,60 @@
+[gd_scene load_steps=2 format=3 uid="uid://sd2b4qet0e3j"]
+
+[ext_resource type="Script" path="res://scripts/config.gd" id="1_c5dya"]
+
+[node name="config" type="CanvasLayer"]
+script = ExtResource("1_c5dya")
+
+[node name="Control" type="Control" parent="."]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="voltar" type="Button" parent="Control"]
+offset_left = 134.0
+offset_top = 228.0
+offset_right = 334.0
+offset_bottom = 259.0
+text = "voltar"
+
+[node name="fullscren" type="Button" parent="Control"]
+offset_left = 182.0
+offset_top = 39.0
+offset_right = 282.0
+offset_bottom = 70.0
+toggle_mode = true
+text = "fullscren"
+
+[node name="1280x720" type="Button" parent="Control"]
+offset_left = 182.0
+offset_top = 109.0
+offset_right = 282.0
+offset_bottom = 140.0
+text = "1280x720"
+
+[node name="800x600" type="Button" parent="Control"]
+offset_left = 182.0
+offset_top = 74.0
+offset_right = 282.0
+offset_bottom = 105.0
+text = "800x600"
+
+[node name="1920x1080" type="Button" parent="Control"]
+visible = false
+offset_left = 182.0
+offset_top = 144.0
+offset_right = 282.0
+offset_bottom = 175.0
+text = "1920x1080"
+
+[connection signal="pressed" from="Control/voltar" to="." method="_on_voltar_pressed"]
+[connection signal="pressed" from="Control/fullscren" to="." method="_on_fullscren_pressed"]
+[connection signal="pressed" from="Control/1280x720" to="." method="_on_x_720_pressed"]
+[connection signal="pressed" from="Control/800x600" to="." method="_on_x_600_pressed"]
+[connection signal="pressed" from="Control/1920x1080" to="." method="_on_x_1080_pressed"]

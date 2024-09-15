@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjvu8txcwpnpr"]
+
+[ext_resource type="Script" path="res://scripts/menu_death.gd" id="1_hst5q"]
+
+[node name="menu_death" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_hst5q")
+
+[node name="Control" type="Control" parent="."]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="menu" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
+text = "MENU"
+
+[node name="reset" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "REINICIAR"
+
+[node name="quit" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "SAIR"
+
+[connection signal="pressed" from="Control/menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Control/reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="Control/quit" to="." method="_on_quit_pressed"]

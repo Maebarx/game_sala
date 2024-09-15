@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2uvevfom0w37"]
+
+[ext_resource type="Script" path="res://scripts/hud_pause.gd" id="1_p7pjn"]
+
+[node name="hud_pause" type="CanvasLayer"]
+script = ExtResource("1_p7pjn")
+
+[node name="Control" type="Control" parent="."]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="hud_pause" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="continuar" type="Button" parent="Control/hud_pause"]
+layout_mode = 2
+text = "Continuar"
+
+[node name="reiniciar" type="Button" parent="Control/hud_pause"]
+layout_mode = 2
+text = "Reiniciar"
+
+[node name="sair" type="Button" parent="Control/hud_pause"]
+layout_mode = 2
+text = "Sair"
+
+[connection signal="pressed" from="Control/hud_pause/continuar" to="." method="_on_continuar_pressed"]
+[connection signal="pressed" from="Control/hud_pause/reiniciar" to="." method="_on_reiniciar_pressed"]
+[connection signal="pressed" from="Control/hud_pause/sair" to="." method="_on_sair_pressed"]

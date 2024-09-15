@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://bn0aoxhp5bbqn"]
+
+[ext_resource type="PackedScene" uid="uid://ch1qyoydmb3mk" path="res://cenas/fase_01.tscn" id="1_dno04"]
+
+[node name="teste" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="fase_01" parent="." instance=ExtResource("1_dno04")]

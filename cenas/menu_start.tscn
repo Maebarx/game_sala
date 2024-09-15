@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://lv20w5dka3mw"]
+
+[ext_resource type="Texture2D" uid="uid://c5bjigv1j2oss" path="res://assets/1 - Grassland/Background parts/_Complete_static_BG_(288 x 208).png" id="1_ey6e4"]
+[ext_resource type="Script" path="res://scripts/menu_start.gd" id="1_wdte3"]
+
+[node name="menuStart" type="CanvasLayer"]
+script = ExtResource("1_wdte3")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_ey6e4")
+expand_mode = 1
+
+[node name="iniciar" type="Button" parent="TextureRect"]
+modulate = Color(0.756863, 0.756863, 0, 1)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 288.0
+offset_right = 109.0
+offset_bottom = 319.0
+text = "iniciar jogo
+"
+flat = true
+
+[node name="sair" type="Button" parent="TextureRect"]
+modulate = Color(0.756863, 0.756863, 0, 1)
+layout_mode = 0
+offset_left = 368.0
+offset_top = 288.0
+offset_right = 467.0
+offset_bottom = 319.0
+text = "Sair 
+"
+flat = true
+
+[node name="configuracao" type="Button" parent="TextureRect"]
+modulate = Color(0.756863, 0.756863, 0, 1)
+layout_mode = 0
+offset_left = 184.0
+offset_top = 288.0
+offset_right = 290.0
+offset_bottom = 319.0
+text = "configrações
+"
+flat = true
+
+[connection signal="pressed" from="TextureRect/iniciar" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="TextureRect/sair" to="." method="_on_sair_pressed"]
+[connection signal="pressed" from="TextureRect/configuracao" to="." method="_on_configuracao_pressed"]
