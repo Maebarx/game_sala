@@ -14,14 +14,17 @@ func _process(delta):
 
 
 func _on_menu_pressed():
-	get_tree().change_scene_to_file("res://cenas/menu_start.tscn")
 	Globals.pontos = 0
+	get_tree().change_scene_to_file("res://cenas/menu_start.tscn")
+
 
 func _on_reset_pressed():
-	get_tree().change_scene_to_file("res://cenas/fase_01.tscn")
 	Globals.pontos = 0
+	get_tree().change_scene_to_file("res://cenas/fase_01.tscn")
+
 
 
 func _on_quit_pressed():
-	get_tree().quit()
+	print("saiu")
 	Globals.pontos = 0
+	get_tree().quit()

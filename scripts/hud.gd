@@ -3,7 +3,6 @@ extends Control
 @onready var player = $"../../../player"
 @onready var timer_count = $hud_margem/timer/timer as Label
 @onready var point_counter = $hud_margem/pontos/pontos as Label
-
 @onready var timer = $Timer as Timer 
 
 signal  tempo_acabou()
@@ -24,9 +23,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if minutos == 0 && segundos == 0:
-			emit_signal("tempo_acabou")
+		print("tempo acabou")
+		player._dano()
 	point_counter.text = str("%03d" % Globals.pontos)
-
 
 
 

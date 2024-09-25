@@ -1,12 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://crby352ihgn0l"]
+[gd_scene load_steps=11 format=3 uid="uid://crby352ihgn0l"]
 
 [ext_resource type="PackedScene" uid="uid://lv20w5dka3mw" path="res://cenas/menu_start.tscn" id="1_26862"]
 [ext_resource type="PackedScene" uid="uid://sd2b4qet0e3j" path="res://cenas/config.tscn" id="1_qtvu6"]
 [ext_resource type="Script" path="res://scripts/mundoGG.gd" id="1_rbd48"]
 [ext_resource type="PackedScene" uid="uid://d2uvevfom0w37" path="res://cenas/hud_pause.tscn" id="3_msk1e"]
+[ext_resource type="PackedScene" uid="uid://bkk8bauca8mrv" path="res://cenas/fase_02.tscn" id="3_swpwp"]
+[ext_resource type="PackedScene" uid="uid://dqf7bf5rrv27h" path="res://cenas/fase_03.tscn" id="4_6pwch"]
 [ext_resource type="PackedScene" uid="uid://s1buo0jdlrp" path="res://cenas/player.tscn" id="5_56j6d"]
 [ext_resource type="PackedScene" uid="uid://ch1qyoydmb3mk" path="res://cenas/fase_01.tscn" id="5_rfe52"]
 [ext_resource type="PackedScene" uid="uid://bjvu8txcwpnpr" path="res://cenas/menu_death.tscn" id="7_lwqi3"]
+[ext_resource type="PackedScene" uid="uid://clxkmnvhddgpk" path="res://cenas/fases.tscn" id="10_rl1lp"]
 
 [node name="MundoG" type="Node2D"]
 position = Vector2(1660, 1228)
@@ -15,6 +18,10 @@ script = ExtResource("1_rbd48")
 [node name="fases" type="Node2D" parent="."]
 
 [node name="fase_01" parent="fases" instance=ExtResource("5_rfe52")]
+
+[node name="fase_02" parent="fases" instance=ExtResource("3_swpwp")]
+
+[node name="fase_03" parent="fases" instance=ExtResource("4_6pwch")]
 
 [node name="player" parent="." instance=ExtResource("5_56j6d")]
 
@@ -27,3 +34,5 @@ script = ExtResource("1_rbd48")
 [node name="menuStart" parent="config" instance=ExtResource("1_26862")]
 
 [node name="config" parent="config" instance=ExtResource("1_qtvu6")]
+
+[node name="fases" parent="config" instance=ExtResource("10_rl1lp")]

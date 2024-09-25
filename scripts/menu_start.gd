@@ -16,9 +16,14 @@ func _on_iniciar_pressed():
 
 
 func _on_sair_pressed():
+	print("saiu")
 	get_tree().quit()
-	print("sair")
+
 
 
 func _on_configuracao_pressed():
 	get_tree().change_scene_to_file("res://cenas/config.tscn")
+
+
+func _on_fases_pressed() -> void:
+	get_tree().change_scene_to_file("res://cenas/fases.tscn")

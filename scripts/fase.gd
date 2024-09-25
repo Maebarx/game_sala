@@ -4,6 +4,7 @@ extends Node2D
 
 func _ready():
 	player.morreu.connect(menuDeath)
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func menuDeath():

@@ -20,21 +20,19 @@ expand_mode = 1
 [node name="iniciar" type="Button" parent="TextureRect"]
 modulate = Color(0.756863, 0.756863, 0, 1)
 layout_mode = 0
-offset_left = 16.0
-offset_top = 288.0
-offset_right = 109.0
-offset_bottom = 319.0
-text = "iniciar jogo
-"
+offset_top = 182.0
+offset_right = 64.0
+offset_bottom = 213.0
+text = "Start"
 flat = true
 
 [node name="sair" type="Button" parent="TextureRect"]
 modulate = Color(0.756863, 0.756863, 0, 1)
 layout_mode = 0
-offset_left = 368.0
-offset_top = 288.0
-offset_right = 467.0
-offset_bottom = 319.0
+offset_left = 216.0
+offset_top = 181.5
+offset_right = 315.0
+offset_bottom = 212.5
 text = "Sair 
 "
 flat = true
@@ -42,14 +40,24 @@ flat = true
 [node name="configuracao" type="Button" parent="TextureRect"]
 modulate = Color(0.756863, 0.756863, 0, 1)
 layout_mode = 0
-offset_left = 184.0
-offset_top = 288.0
-offset_right = 290.0
-offset_bottom = 319.0
-text = "configrações
-"
+offset_left = 72.0
+offset_top = 182.0
+offset_right = 146.0
+offset_bottom = 213.0
+text = "Config"
+flat = true
+
+[node name="fases" type="Button" parent="TextureRect"]
+modulate = Color(0.756863, 0.756863, 0, 1)
+layout_mode = 0
+offset_left = 152.0
+offset_top = 184.0
+offset_right = 226.0
+offset_bottom = 215.0
+text = "Fases"
 flat = true
 
 [connection signal="pressed" from="TextureRect/iniciar" to="." method="_on_iniciar_pressed"]
 [connection signal="pressed" from="TextureRect/sair" to="." method="_on_sair_pressed"]
 [connection signal="pressed" from="TextureRect/configuracao" to="." method="_on_configuracao_pressed"]
+[connection signal="pressed" from="TextureRect/fases" to="." method="_on_fases_pressed"]

@@ -24,8 +24,8 @@ func _on_continuar_pressed():
 
 func _on_reiniciar_pressed():
 	get_tree().paused = false
-	get_tree().change_scene_to_file("res://cenas/fase_01.tscn")
+	get_tree().reload_current_scene()
 
 
 func _on_sair_pressed():
-	get_tree().quit
+	get_tree().quit()
